@@ -1,0 +1,35 @@
+DML 
+
+1. insert
+  a. insert into table_name(col1, col2, col3, ..., colN) values(val1, val2, val3, ... , valN)
+    : make sure that the number of colums and the number of values must be equal
+  b. insert into table_name_1(col1, col2, col3, ..., colN) 
+     select col1, col2, col3, ... , colN 
+     from table_name_2 
+     where 1=1 
+     and condition1 = 'con1'
+     and condition2 = 'con2'
+  c. insert into table_name_1
+     select col1, col2, col3, ... , colN 
+     from table_name_2 
+     where 1=1 
+     and condition = 'con1'
+     and condition2 = 'con2'
+      : this type of sql inserts all columns of table_name_1, so must be the number of select columns must be equal to the table_name_1
+
+2. update
+  a. update table_name
+     set col1 = 'val1'
+       , col2 = 'va'2'
+     where 1=1
+     and table_name_condition1 = 'col1'
+     and table_name_condition2 = 'col2'
+     
+3. delete
+  a. delete from table_name
+     where 1=1
+     and condition1 = 'col1'
+     and condition2 = 'col2'
+      : before deleting datas, make sure that the datas that will be deleted must be the intended ones
+        , by implementing a query(select from table_name where 1=1 and condition1 = 'col1' and condition2 = 'col2')
+
